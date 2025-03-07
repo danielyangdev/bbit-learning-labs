@@ -18,23 +18,25 @@ function FeaturedNewsCard({ article }: NewsCardProps) {
 
     // Hint: Some classes included in `globals.css` may help with styling.
     return (
-        <div className="featured-news-card">
-            <div className="featured-news-img-div">
+        <div className="featured-news-card flex flex-col lg:flex-row gap-4 max-w-full">
+            <div className="featured-news-img-div flex-shrink-0">
                 <img
                     src={article.image_url}
                     alt={article.title}
-                    className="featured-news-img"
+                    className="featured-news-img object-cover w-full lg:w-[350px] max-h-[250px] rounded-lg"
                 />
             </div>
-            <div className="featured-news-info">
-                <h2 className="featured-story-title">{article.title}</h2>
-                <p className="featured-story-summary">{article.body}</p>
-                {article.author && <span className="featured-story-author">By {article.author}</span>}
-                {article.url &&
-                    <span className="featured-story-author" >
+            <div className="featured-news-info flex flex-col flex-grow min-w-0">
+                <h2 className="featured-story-title text-xl font-bold break-words">{article.title}</h2>
+                <p className="featured-story-summary text-gray-700 truncate overflow-hidden">
+                    {article.body}
+                </p>
+                {article.author && <span className="featured-story-author text-gray-500">By {article.author}</span>}
+                {article.url && (
+                    <span className="featured-story-author text-blue-500">
                         Via <Link className="origin-link" href={article.url} target="_blank">{article.url}</Link>
                     </span>
-                }
+                )}
             </div>
         </div>
     );

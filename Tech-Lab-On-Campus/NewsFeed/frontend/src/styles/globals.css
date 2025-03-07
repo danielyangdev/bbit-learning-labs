@@ -24,6 +24,7 @@ There are plenty of different styling frameworks to use, and we encourage you to
 /* Featured News */
 .featured-news-card {
   @apply grid grid-cols-2 gap-4
+
 }
 
 .featured-news-img-div {
@@ -46,14 +47,14 @@ There are plenty of different styling frameworks to use, and we encourage you to
   font-family: "PT Serif", serif;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: wrap;
   @apply text-title text-left;
 }
 
 .featured-story-summary {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: wrap;
   @apply line-clamp-[8] lg:line-clamp-none text-body
 }
 .featured-story-author {
@@ -96,14 +97,14 @@ There are plenty of different styling frameworks to use, and we encourage you to
   font-family: "PT Serif", serif;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: wrap;
   @apply text-title text-left text-2xl pb-2;
 }
 
 .story-summary {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: wrap;
   @apply line-clamp-[8] lg:line-clamp-none text-body
 }
 
